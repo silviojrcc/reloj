@@ -33,8 +33,14 @@
         }
         
         fecha.innerHTML = `${daysOfWeek[fechaActual.getDay()]} ${fechaActual.getDate()} de ${months[fechaActual.getMonth()]} del ${fechaActual.getFullYear()}`
-        hora.innerHTML =`<h4>${horas}:${minutos}:${segundos} ${amPm}</h4>`;
-
+        hora.innerHTML =`
+            <div class="hora-minutos">
+            ${horas}:${minutos}
+            </div>
+            <div class="segundos-ampm">
+                <span class="am-pm">${amPm}</span>
+                <span class="segundos">${segundos}</span>
+            </div>`;
     }
 
 setInterval(obtenerFecha, 1000);
