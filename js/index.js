@@ -35,7 +35,7 @@
         fecha.innerHTML = `${daysOfWeek[fechaActual.getDay()]} ${fechaActual.getDate()} de ${months[fechaActual.getMonth()]} del ${fechaActual.getFullYear()}`
         hora.innerHTML =`
             <div class="hora-minutos">
-            ${horas}:${minutos}
+            ${horas}:${minutos}:
             </div>
             <div class="segundos-ampm">
                 <span class="am-pm">${amPm}</span>
