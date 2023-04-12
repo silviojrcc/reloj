@@ -20,26 +20,18 @@
             horas = 12;
         }
 
-        if (horas < 10) {
-            horas = "0" + horas;
-        }
-    
-        if (minutos < 10) {
-            minutos = "0" + minutos;
-        }
-    
-        if (segundos < 10) {
-            segundos = "0" + segundos;
+        function formatearTiempo(tiempo) {
+            return (tiempo < 10) ? '0' + tiempo : tiempo;
         }
         
         fecha.innerHTML = `${daysOfWeek[fechaActual.getDay()]} ${fechaActual.getDate()} de ${months[fechaActual.getMonth()]} del ${fechaActual.getFullYear()}`
         hora.innerHTML =`
             <div class="hora-minutos">
-            ${horas}:${minutos}:
+            ${formatearTiempo(horas)}:${formatearTiempo(minutos)}:
             </div>
             <div class="segundos-ampm">
                 <span class="am-pm">${amPm}</span>
-                <span class="segundos">${segundos}</span>
+                <span class="segundos">${formatearTiempo(segundos)}</span>
             </div>`;
     }
 
